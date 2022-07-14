@@ -30,7 +30,7 @@ class Example extends Bindable
 		// As an example, log each element that has the "my-example-class" class
 		console.log(element);
 
-		// Of course, you could do anything you like here like adding event listeners:
+		// Of course, you could also do anything you like here like adding event listeners:
 		element.addEventListener("click", (event) =>
 		{
 			event.preventDefault();
@@ -49,7 +49,7 @@ Example.bindAll();
 If you have additional JavaScript that will create new elements, you can also optionally have your class watch for changes automatically using `Bindable.observe()`:
 
 ```js
-Bindable.observe()
+Bindable.observe();
 ```
 
 By default, Bindable's mutation observer will watch `document.documentElement`, which is the root. If you'd prefer to watch a specific element lower in the tree instead, you can pass a different element to `Bindable.observe()` as follows:
